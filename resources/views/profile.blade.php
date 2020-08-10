@@ -58,8 +58,10 @@
             var url = $(this).data('href');
            window.location.href = url;
         })
-        
+        // remove session after update profile
         setTimeout(function(){ 
+          sessionStorage.removeItem('alert-class');
+          sessionStorage.removeItem('message');
            $("#alertMsg").hide();
          }, 3000);
     })
